@@ -1,0 +1,10 @@
+# создать Ubuntu образ и контейнер nweb
+sudo docker run -p 1234:80 --name nweb -i -t ubuntu '/bin/bash'
+sudo docker run -p 1234:80 --name nweb ubuntu '/bin/bash' 
+
+
+# показать работающие корнтейнеры
+sudo docker container ls -aq
+
+# удалить работающий образ
+sudo docker rmi -f $(sudo docker images -a -q)
